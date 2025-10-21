@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luis Castellar — Portfolio</title>
+    <meta name="description" content="Futuristic Portfolio of Luis Castellar — Gameplay, AI, Online Systems (Unreal Engine 5, C++)" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#8b5cf6', // Purple
+                        accent2: '#3b82f6' // Blue
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            /* Keeps the base background */
+            background: radial-gradient(circle at 20% 20%, #0a0520, #05030a 70%),
+                        linear-gradient(to bottom right, rgba(60,30,120,0.15), rgba(0,0,0,0.9));
+            background-attachment: fixed;
+            color: #e5e7eb;
+        }
+        
+        /* SOLID "GLASS" CLASS: Removes backdrop-filter for solid color, keeps dark appearance. */
+        .glass { 
+            background: #0a0520; /* Solid dark background */
+            border: 1px solid rgba(255,255,255,0.15); /* Subtle border */
+        }
+        
+        /* MAKES THE FIXED HEADER SEMI-TRANSPARENT (GLASS) */
+        header.glass {
+            background: rgba(255,255,255,0.05); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        html { scroll-behavior: smooth; }
+
+        /* BACKGROUND STYLES: Applies the code image to the section */
+        .bg-hero-image {
+            position: relative;
+            background-image: url('assets/portfolioBackground.jpg');
+            background-position: right center; /* Moves the code to the right */
+            background-repeat: no-repeat;
+            background-size: cover; 
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            overflow: hidden;
+        }
+        
+        /* VERY OPAQUE OVERLAY: Makes the background image almost invisible, leaving a solid color. */
+        .bg-hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Maximum opacity: Solid black so the image is not visible */
+            background: #05030a; 
+            z-index: -1; 
+        }
+    </style>
+</head>
+<body class="antialiased font-sans leading-relaxed" data-github-url="https://github.com/luiscastellar">
+    <header class="fixed top-0 w-full z-50 glass border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-accent2 flex items-center justify-center font-semibold text-black">LC</div>
+                <div>
+                    <h1 class="text-lg font-semibold">Luis Castellar</h1>
+                    <p class="text-xs text-gray-400">Game Programmer — Unreal Engine 5 • C++</p>
+                </div>
+            </a>
+
+            <nav class="flex items-center gap-6 text-sm">
+                <a href="index.html#about" class="hover:text-accent font-semibold">Home</a>
+                <a href="projects.html" class="hover:text-accent">Projects</a>
+                <a href="index.html#skills" class="hover:text-accent">Skills</a>
+                <a href="index.html#contact" class="hover:text-accent">Contact</a>
+                <a id="github-link" href="#" target="_blank" rel="noopener" class="px-3 py-1.5 border border-gray-700 rounded-md hover:bg-white/5">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section id="about" class="max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12 items-center bg-hero-image">
+            
+            <div class="lg:col-span-1 flex justify-center lg:justify-start">
+                <div class="p-2 rounded-full w-64 h-64 flex items-center justify-center border border-accent/30">
+                    <img src="assets/self-image.jpeg" alt="Photo of Luis Castellar Domínguez, Game Programmer" class="rounded-full w-full h-full object-cover border-4 border-accent/30 shadow-2xl shadow-accent/20">
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 text-center lg:text-left glass p-8 rounded-2xl shadow-lg">
+                <p class="text-sm font-medium uppercase text-accent mb-3 tracking-widest">
+                    ENGINEER & TECHNICAL DESIGNER
+                </p>
+                <h2 class="text-6xl font-extrabold mb-4 leading-tight">Luis Castellar Domínguez</h2>
+                
+                <p class="text-gray-300 text-2xl max-w-4xl lg:mx-0 mx-auto">
+                    Programmer specialized in Unreal Engine 5 and C++, focused on technical architecture and developing gameplay, AI and online multiplayer systems. I am passionate about building tools and solutions that optimize production and enhance the player experience.
+                </p>
+
+                <div class="mt-8 flex flex-wrap lg:justify-start justify-center gap-3">
+                    <span class="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold">Gameplay Programmer</span>
+                    <span class="px-4 py-2 bg-accent2/20 text-accent2 rounded-full text-sm font-semibold">Online Systems Programmer</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full text-sm">AI Programmer</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Technical Designer</span>
+                </div>
+
+                <div class="mt-10 flex lg:justify-start justify-center gap-4">
+                    <a href="projects.html" class="bg-gradient-to-r from-accent to-accent2 px-7 py-3 rounded-lg font-bold text-black shadow-lg shadow-accent/40 transition hover:scale-[1.03]">View Featured Projects</a>
+                    <a href="#contact" class="border border-gray-700 px-7 py-3 rounded-lg hover:border-accent hover:text-accent transition">Let's Talk</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="max-w-6xl mx-auto px-6 py-24">
+            <h2 class="text-4xl font-bold mb-12 text-center border-b pb-4 border-gray-800">Technical Specialization</h2>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl border-l-4 border-accent transition hover:border-accent2 hover:shadow-xl hover:shadow-accent/10">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">Engines & Core</h3>
+                    <ul class="space-y-3 text-base font-light">
+                        <li><strong class="text-accent">Unreal Engine 5:</strong> C++, Blueprints, Networking, AI.</li>
+                        <li><strong class="text-accent">C++:</strong> Low-level Programming, Engine Architecture (2D/3D).</li>
+                        <li><strong class="text-accent">C# and Unity</strong> (2D/3D Systems).</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border-l-4 border-accent2 transition hover:border-accent hover:shadow-xl hover:shadow-accent2/10">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">Systems & Workflow</h3>
+                    <ul class="space-y-3 text-base font-light">
+                        <li><strong class="text-accent">Version Control:</strong> GitHub / Git Desktop.</li>
+                        <li><strong class="text-accent">Project Management:</strong> Jira, HackNPlan, Notion, Trello.</li>
+                        <li><strong class="text-accent">IDEs:</strong> Visual Studio, Rider.</li>
+                        <li>Internal <strong class="text-accent">Tools</strong> Programming.</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border-l-4 border-white/30 transition hover:border-white/50 hover:shadow-xl hover:shadow-white/5">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">Design & Experience</h3>
+                    <ul class="space-y-3 text-base font-light">
+                        <li><strong class="text-accent">Art & Modeling:</strong> Blender, Maya, Substance 3D Painter.</li>
+                        <li><strong class="text-accent">Adobe Suite:</strong> Photoshop, Premiere Pro, After Effects.</li>
+                        <li><strong class="text-accent">Education:</strong> Advanced Master's in Game Programming / Interactive Product Design Degree.</li>
+                        <li><strong class="text-accent">Languages:</strong> English B2, Native Spanish.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+            <div class="text-center">
+                <h4 class="text-3xl font-bold mb-4">Get in Touch!</h4>
+                <p class="text-gray-300">Luis Castellar Domínguez</p>
+                <p class="text-gray-400 text-sm">Las Rozas de Madrid, Spain</p>
+                
+                <div class="mt-6 space-y-2">
+                    <p class="text-gray-400 text-base">Tel: <span class="text-white">+34 654 158 155</span></p>
+                    <p class="text-gray-400 text-base">Email: <a href="mailto:luiscd2002@gmail.com" class="text-accent underline hover:text-accent2 transition">luiscd2002@gmail.com</a></p>
+                </div>
+
+                <div class="mt-8 flex justify-center gap-4">
+		    <a href="https://www.linkedin.com/in/luis-castellar-domínguez-2bb89824b" target="_blank" class="border border-gray-700 px-4 py-2 rounded-md text-sm hover:border-accent hover:text-accent transition">LinkedIn</a>
+                    <a href="#" class="border border-gray-700 px-4 py-2 rounded-md text-sm hover:border-accent2 hover:text-accent2 transition">Itch.io</a>
+                    <a id="github-button" href="#" class="border border-gray-700 px-4 py-2 rounded-md text-sm hover:border-accent hover:text-accent transition">GitHub</a>
+                    <a href="#" class="border border-gray-700 px-4 py-2 rounded-md text-sm hover:border-accent2 hover:text-accent2 transition">YouTube</a>
+                </div>
+            </div>
+            <p class="text-xs text-gray-600 text-center mt-12">© 2025 Luis Castellar • Futuristic Portfolio • Built with HTML + TailwindCSS</p>
+        </footer>
+    </main>
+
+    <script>
+        const githubURL = document.body.getAttribute('data-github-url');
+        if (githubURL) {
+            document.querySelectorAll('#github-link, #github-button').forEach(e => e.href = githubURL);
+        }
+    </script>
+</body>
+</html>
