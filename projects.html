@@ -133,13 +133,12 @@
             <article class="glass p-8 rounded-2xl border-l-4 border-gray-700 hover:shadow-xl hover:shadow-gray-700/20 transition duration-300">
                 <h3 class="text-3xl font-bold mb-2">TOONKS BATTLE <span class="text-base text-gray-500 font-normal">(2023–2024)</span></h3>
                 
-                <div class="mb-4 rounded-lg overflow-hidden shadow-xl border border-gray-700">
-                    <video controls muted poster="assets/toonktanks_placeholder.jpg" class="w-full h-auto">
-                        <source src="assets/ToonkTanks.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                
+                <a href="assets/ToonkTanks.mp4" target="_blank" class="block mb-4 rounded-lg overflow-hidden shadow-xl border border-gray-700 relative group">
+                    <img src="assets/toonktanks_placeholder.jpg" alt="Trailer Thumbnail for TOONKS BATTLE" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6 3l12 9-12 9V3z"/></svg>
+                    </div>
+                </a>
                 <div class="flex flex-wrap gap-2 mb-4">
                     <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium">Multiplayer Online</span>
                     <span class="px-3 py-1 bg-white/10 rounded-full text-xs font-medium">Unreal Engine 5 (C++)</span>
@@ -151,7 +150,7 @@
                 </div>
             </article>
 
-	    <article class="glass p-8 rounded-2xl border-l-4 border-white/30 hover:shadow-xl hover:shadow-white/5 transition duration-300">
+        <article class="glass p-8 rounded-2xl border-l-4 border-white/30 hover:shadow-xl hover:shadow-white/5 transition duration-300">
                 <h3 class="text-3xl font-bold mb-2">KUBUS LAB <span class="text-base text-gray-500 font-normal">(2024–2025)</span></h3>
                 
                 <a href="assets/Kubus_Lab_Render.mp4" target="_blank" class="block mb-4 rounded-lg overflow-hidden shadow-xl border border-gray-700 relative group">
@@ -191,6 +190,29 @@
                     <a href="#" class="border border-gray-700 px-4 py-2 rounded-lg text-sm hover:border-accent transition">View Code and Documentation</a>
                 </div>
             </article>
+
+            <article class="glass p-8 rounded-2xl border-l-4 border-gray-700 hover:shadow-xl hover:shadow-gray-700/20 transition duration-300">
+                <h3 class="text-3xl font-bold mb-2">PROCEDURAL MAZE GENERATOR + A* ALGORITHM <span class="text-base text-gray-500 font-normal">(2025)</span></h3>
+                
+                <a href="assets/Maze.mp4" target="_blank" class="block mb-4 rounded-lg overflow-hidden shadow-xl border border-gray-700 relative group">
+                    <img src="assets/Maze.png" alt="Video Thumbnail for PROCEDURAL MAZE GENERATOR" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6 3l12 9-12 9V3z"/></svg>
+                    </div>
+                </a>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium">Unity (C#)</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full text-xs font-medium">AI</span>
+                    <span class="px-3 py-1 bg-gray-600/50 text-white rounded-full text-xs font-medium">Design</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full text-xs font-medium">UX</span>
+                </div>
+                <p class="text-gray-300 mb-4">Procedural creation of a maze, with configurable parameters. A* algorithm that solves the maze, allowing you to configure the importance of heuristics.</p>
+                
+                <div class="mt-6 space-y-3">
+                    <a href="assets/Maze.mp4" target="_blank" class="w-full block text-center bg-gradient-to-r from-accent to-accent2 px-4 py-2 rounded-lg text-sm font-bold text-black shadow-md transition hover:scale-[1.02]">▶ WATCH VIDEO</a>
+                </div>
+            </article>
+
         </div>
 
         <div class="mt-20 text-center">
